@@ -1,0 +1,21 @@
+img{
+    height: 30px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.btn-align{
+    float: right;
+    padding-top: 10px;    
+}
+
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+nav{
+    margin-top:0px;
+
+}
