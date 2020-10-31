@@ -1,21 +1,24 @@
 
-.jumbotron{
-    padding-top: 100px;
-    height: 300px;
+.middle-body{
+    padding-top: 120px;
+    margin-top: 50px;
 }
 
-.search{
-    width: 80%;
-    margin: auto;
-}
 
-.contact-cards{
-    padding-top: 20px;
-    padding-bottom: 30px;
-    border:solid;
-    width:50%;
-    margin: auto;
-    text-align: center;
-    background-color:white;
-    font-size: large;
+
+.header-component{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+ 
 }
+/* 
+.main-body{
+    background-image: url('../assets/bus-background.jpg');
+      height: 100vh;  
+     position: relative;  
+    background-size: 100% 100%;
+}  */
+
+

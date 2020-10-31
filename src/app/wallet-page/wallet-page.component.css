@@ -1,0 +1,15 @@
+.thumbnail{
+    text-align: center;
+    overflow-wrap: break-word;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.row{
+    margin-top: -10px;
+    margin-bottom: -100px;
+}
+
+#reg{
+    padding-top: 10px;
+}

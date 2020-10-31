@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    /* background-image: url('/assets/bus-background.jpg'); */
+     /* height: 100vh;  */
+     position: relative;  
+    background-size: 100% 100%;
+    background: 0.5;    
+} 
+
+
+  
+  body::after {
+    content: "";
+    background: url(./assets/bus-background.jpg);
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    /* background-repeat: no-repeat; */
+ 
+  }

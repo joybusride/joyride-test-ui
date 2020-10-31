@@ -1,30 +1,12 @@
-.route{
+.row{
     padding-top: 30px;
-    padding-left: 300px;
+    margin-bottom: -18px;
 }
 
 #from{
-    margin-left: 0px;
-    margin-right: 80px;
-    width: 300px;
-    height: 30px;
+    margin-left: -16px;
 }
 
 #to{
-    width: 300px;
-    height: 30px;
-}
-
-.date-level{
-    margin-top: 40px;
-    margin-left: 300px;
-   
-}
-
-#departure{
-    margin-right: 130px;
-}
-
-#return{
-    margin-right: 80px;
+    margin-left: 15px;
 }

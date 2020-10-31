@@ -1,0 +1,13 @@
+<div class="coach-list">
+    <div class="card bg-light text-dark" *ngFor="let coach of buslist">
+        <div class="card-body"><br>
+            <h4 style="padding-left: 20px;"><strong>{{coach.name}}</strong></h4>
+            <button class="btn btn-primary" (click)="coachInfo()" style="float: right; margin-right: 10px;margin-top: -20px;">View / Book</button><br>
+            <label style="padding-left: 20px;"><strong>Seats: {{coach.seats}}</strong></label>
+            <label style="padding-left: 70px;"><strong>Cost/Day: &#x20B9; {{coach.costs}}</strong></label>
+            <label style="padding-left: 70px;"><strong>Type: {{coach.type}} </strong></label>
+        </div>
+    </div>
+
+ 
+</div>

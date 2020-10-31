@@ -1,0 +1,25 @@
+img{
+    height: 30px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    margin-top: -5px;
+}
+
+.btn-align{
+    float: right;
+    padding-top: 10px;
+        
+}
+
+.navbar{
+    margin: auto;
+    overflow: hidden;
+}
+
+#signup{
+    margin-right: 20px;
+}
+
+span{
+    padding-right: 4px;
+}

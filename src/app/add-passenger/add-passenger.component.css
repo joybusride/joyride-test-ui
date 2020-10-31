@@ -1,0 +1,78 @@
+
+table,th,td{
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    width: 50%;
+ 
+}
+th {
+    background-color:black;
+    color:rgb(231, 224, 224);
+  }
+img{
+    height: 30px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.btn-align{
+    float: right;
+    padding-top: 10px;    
+}
+.nav2{
+    margin-top: 0px;
+
+}
+.header{
+    margin-bottom: 0px;
+}
+.passengers{
+    text-align: center;
+    margin:auto;
+    width: 80%;
+}
+.g{
+    margin-left: 0px;
+}
+.footer {
+   
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+    border-radius: 5px;
+    background-color:black;
+    color:grey;
+    text-align: center;
+
+    
+        
+ }
+ .seatButton{
+     margin-top: 20px;
+     text-align: center;
+ }
+ .response{
+     overflow: visible;
+     
+     
+
+ }
+/*.footer {
+    margin-top: 220px;
+    padding: 100px;
+    text-align: center;
+    width: 100%;
+    color: white;
+  }*/
+/*.navbar{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+https://stackoverflow.com/questions/47708370/angular-4-how-to-keep-footer-at-bottom-with-dynamic-page-content
+nav{
+    margin-top:0px;
+
+}*/

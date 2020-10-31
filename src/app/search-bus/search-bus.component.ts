@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-bus',
@@ -8,12 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class SearchBusComponent implements OnInit {
 
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
- 
-
+  busList(){
+    console.log("Hello")
+    this.router.navigate(['/bus-list'])
+  }
 
 }

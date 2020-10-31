@@ -1,0 +1,71 @@
+
+<!--For adding passengers-->
+<div class="passengers">
+    <form #addpassenger="ngForm" class="form-inline" (ngSubmit)="addPassenger(addpassenger)">
+        <label for="fn" class="mr-sm-2">First Name:</label>
+        <input type="text" #fname="ngModel" class="form-control mb-2 mr-sm-2" placeholder="Enter first name"
+            name="fName" id="fn" [(ngModel)]="fName" required>
+        <div *ngIf="fname.invalid &&(fname.dirty || fname.touched)">
+            <div *ngIf="fname.errors.required" style="color:red;">First Name is required</div>
+            <!--<div *ngIf="email.errors.pattern" style="color:red;">Invalid email</div>-->
+        </div>
+        <br />
+        <br />
+        <label for="ln" class="mr-sm-2">Last Name:</label>
+        <input type="text" #lname="ngModel" class="form-control mb-2 mr-sm-2" placeholder="Enter last name" name="lName"
+            id="ln" [(ngModel)]="lName" required>
+        <div *ngIf="lname.invalid &&(lname.dirty || lname.touched)">
+            <div *ngIf="lname.errors.required" style="color:red;">Last Name is required</div>
+            <!--<div *ngIf="email.errors.pattern" style="color:red;">Invalid email</div>-->
+        </div>
+        <br />
+        <br />
+        <label for="gender" class="mr-sm-2">Gender:</label>
+        <input type="radio" #gen="ngModel" class="g" id="m" name="gender" value="Male" [(ngModel)]="gender">Male
+        <input type="radio" class="g" id="f" name="gender" value="Female" [(ngModel)]="gender">Female
+        <div *ngIf="gen.errors" style="color:red;">Gender is required</div>
+        <br />
+        <br />
+        <label for="ag" class="mr-sm-2">Age:</label>
+        <input type="number" #Age="ngModel" class="form-control mb-2 mr-sm-2" name="age" min="3" id="ag"
+            [(ngModel)]="age" required>
+        <div *ngIf="Age.invalid &&(Age.dirty || Age.touched)">
+            <div *ngIf="Age.errors.required" style="color:red;">Age is required</div>
+            <div *ngIf="Age.value<3" style="color:red;">Age > 3 is required</div>
+
+        </div>
+        <br />
+        <br />
+        <!-- <button type="submit" class="btn btn-primary mb-2" (click)="addPassenger(addpassenger)">Add
+            Passenger</button> -->
+        <button type="submit" class="btn btn-primary mb-2" [disabled]="addpassenger.invalid">Add
+            Passenger</button>
+    </form>
+</div>
+<br />
+<br />
+<!--For displaying passenger list-->
+<div class="passengerList">
+    <div *ngIf="showPassengers">
+        <table class="passenger">
+
+            <tr>
+                <th>Passenger Name</th>
+                <th>Gender</th>
+                <th>Age</th>
+            </tr>
+
+            <tr *ngFor="let p of passengers">
+                <td>{{p.firstName+" "+p.lastName}}</td>
+                <td>{{p.gender}}</td>
+                <td>{{p.age}}</td>
+            </tr>
+
+        </table>
+        <div class="seatButton">
+            <a [routerLink]="['/seat']"><button type="submit" class="btn btn-primary mb-2">Book Seats</button></a>
+        </div>
+    </div>
+
+
+</div>

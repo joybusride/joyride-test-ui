@@ -1,0 +1,14 @@
+<div class="element" >
+<label class="form-label">Enter Wallet Pin</label>
+<form   #f=ngForm (ngSubmit)="onVerify()" ><div class="confirmation_code_group">
+    <div class="split_input_item input_wrapper"><input type="number" name="f" pattern="/^\d{1}$/" class="inline_input" maxlength="1" min="1" max="9"></div>
+    <div class="split_input_item input_wrapper"><input type="number" name="s" class="inline_input" maxlength="1" min="1" max="9"></div>
+    <div class="split_input_item input_wrapper"><input type="number" name="t"  class="inline_input" maxlength="1" min="1" max="9"></div>
+    <div class="split_input_item input_wrapper"><input type="number"  name="f"  class="inline_input" maxlength="1" min="1" max="9"></div>
+    <div class="split_input_item input_wrapper"><input type="number"  name="fi"  class="inline_input" maxlength="1" min="1" max="9"></div>
+    <div class="split_input_item input_wrapper"><input type="number"   name="si" class="inline_input" maxlength="1" min="1" max="9"></div> 
+
+<button class="btn btn-success" type="submit"><span class="glyphicon glyphicon-check" style="padding-right: 8px;"></span>Verify</button>
+</div>
+
+</form>

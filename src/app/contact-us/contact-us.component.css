@@ -1,0 +1,47 @@
+
+
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+nav{
+    margin-top:0px;
+
+}
+
+.pic{
+    width: 900px;
+    height: 360px;
+    margin-bottom: -15px;
+    margin-top: -60px;
+}
+
+.Kashmir{
+    padding-left: 65px;
+}
+
+.content{
+    width: 900px;
+    background-color: #333333;
+}
+
+
+.head{
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+
+.phone{
+    float: right;
+    margin-right: 10px;
+    padding-top: 20px;
+}
+
+.Ranchi{
+    padding-left: 35px;
+ 
+}

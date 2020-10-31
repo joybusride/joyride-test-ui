@@ -1,0 +1,63 @@
+*{
+    /* border-radius: 20px; */
+}
+body{
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+/*.header{
+    padding: 10px;
+    font-size: 55px;
+    text-align: center;
+    background: white;
+    width: 80%;
+    margin: auto; /*horizontally center 10%(Left) + 40% (center)40% + 10%(Right) */
+    /* border-radius: 20px; */
+
+.page-footer{
+    text-align: center;
+    font-size: 10px;
+    width:100%;
+    bottom:0;
+   
+        /* margin-bottom: 10px; */
+}
+img{
+    height: 30px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.btn-align{
+    float: right;
+    padding-top: 10px;    
+}
+
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+nav{
+    margin-top:0px;
+
+}
+.bus{
+    margin-top: 100px;
+    padding: 50px;
+}
+.buslist{
+    width: 100%;
+    background-color:  #f2f2f2;
+}
+.columnlist{
+    color: snow;
+    background-color: black;
+    text-align: center;
+
+}
+.attributes{
+    text-align: center;
+}
