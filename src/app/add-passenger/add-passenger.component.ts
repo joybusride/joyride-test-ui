@@ -41,11 +41,6 @@ export class AddPassengerComponent implements OnInit {
     
 
   }
-  bookSeats(){
-
-    
-
-  }
-
+  
 
 }

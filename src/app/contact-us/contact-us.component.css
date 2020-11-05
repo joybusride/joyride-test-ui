@@ -1,5 +1,8 @@
 
-
+.contact-us{
+    text-align: center;
+    /* margin-left: 50px; */
+}
 .navbar{
     overflow: hidden;
     position: fixed;
@@ -20,6 +23,7 @@ nav{
 
 .Kashmir{
     padding-left: 65px;
+    padding-right: 65px;
 }
 
 .content{
@@ -36,12 +40,16 @@ nav{
 
 
 .phone{
-    float: right;
+    /* float: right; */
     margin-right: 10px;
+    padding-left: 100px;
     padding-top: 20px;
 }
 
 .Ranchi{
     padding-left: 35px;
  
+}
+.row{
+    margin-left: 100px;
 }

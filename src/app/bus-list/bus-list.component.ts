@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BusDetails } from './Details';
 
 @Component({
@@ -8,7 +9,7 @@ import { BusDetails } from './Details';
 })
 export class BusListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     console.log(this.newDetail("BMTC","8:00 am","6:00 am","Madurai","Jammu",50,"Rs 500","70 km"));
@@ -30,6 +31,10 @@ export class BusListComponent implements OnInit {
     this.busdetails.push({BusName:busname1,DepartureTime:departuretime1,ArrivalTime:arrivaltime1,From:from1,To:to1,Seats:seats1,Fare:fare1,Distance:distance1});
     this.adddetails=true;
    console.log(this.busdetail);
+  }
+  passengerList(){
+    
+    this.router.navigate(['passenger-list'])
   }
 
 }

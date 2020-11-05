@@ -4,7 +4,9 @@ body{
      /* height: 100vh;  */
      position: relative;  
     background-size: 100% 100%;
-    background: 0.5;    
+    background: 0.5; 
+    background-repeat: repeat; 
+    
 } 
 
 
@@ -17,8 +19,13 @@ body{
     left: 0;
     bottom: 0;
     right: 0;
-    position: absolute;
+    position: fixed;
+    /* position: relative; */
     z-index: -1;  
+    background-repeat: repeat;
     /* background-repeat: no-repeat; */
  
+  }
+  .middle-body{
+    margin-left:200px;
   }

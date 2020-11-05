@@ -1,79 +1,51 @@
-              
-              <div class="row">
-
-                <div class="col-md-1"></div>
-
-
-                <div class="col-md-11" style="margin-right: -50px;">
-              
-              
-              <div class="row">
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">
-                                    Payment Details
-                                </h3>
-                                <div class="checkbox pull-right">
-                                    <label>
-                                        <input type="checkbox" />
-                                        Remember
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <form #cardpay="ngForm"role="form">
-                                    <div class="form-group">
-                                        <label for="cardNumber">
-                                            CARD NUMBER</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="cardNumber"
-                                                placeholder="Valid Card Number"  name="cardNumber" [(ngModel)] ="cardNumber" required autofocus />
-                                            <span class="input-group-addon"><span
-                                                    class="glyphicon glyphicon-lock"></span></span>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="form-group">
-                                                <label for="expityMonth">
-                                                    EXPIRY DATE</label>
-                                                <div class="col-xs-6 col-lg-6 pl-ziro">
-                                                    <input type="text" class="form-control" id="expityMonth" placeholder="MM"
-                                                       name="month" [(ngModel)] ="month" required />
-                                                </div>
-                                                <div class="col-xs-6 col-lg-6 pl-ziro">
-                                                    <input type="text" class="form-control" id="expityYear" placeholder="YY"
-                                                       name="year" [(ngModel)] ="year" required /></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-5 pull-right">
-                                            <div class="form-group">
-                                                <label for="cvCode">
-                                                    CV CODE</label>
-                                                <input type="password" class="form-control" id="cvCode" placeholder="CV"
-                                                     name="cvv" [(ngModel)] ="cvv" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+<h3 class="panel-title">
+    Payment Details
+</h3>
+<div class="card">
+    <div class="checkbox pull-right">
+    </div>
+    <div class="panel-body">
+        <form #cardpay="ngForm" role="form" >
+            <div class="form-group">
+                <label for="cardNumber">
+                    CARD NUMBER</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                        name="cardNumber" [(ngModel)]="cardNumber" required autofocus />
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-7">
+                    <label for="expityMonth">
+                        EXPIRY DATE</label>
+                    <div class="form-group">
+                        <div class="col-xs-6 col-lg-6 pl-ziro">
+                            <input type="text" class="form-control" id="expityMonth" placeholder="MM" name="month"
+                                [(ngModel)]="month" required />
                         </div>
-                        <ul class="nav nav-pills nav-stacked">
-                            <li class="active"><a href="#"><span class="badge pull-right">
-                                &#x20B9;	        
-                                <!-- <span class="glyphicon glyphicon-usd"></span> -->
-                                        <!--amount--></span> Final Payment</a>
-                            </li>
-                        </ul>
-                        <br />
-                        <a href="#" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+                        <div class="col-xs-6 col-lg-6 pl-ziro">
+                            <input type="text" class="form-control" id="expityYear" placeholder="YY" name="year"
+                                [(ngModel)]="year" required /></div>
                     </div>
                 </div>
-
-
-   
+                <div class="col-md-5 pull-right">
+                    <div class="form-group">
+                        <label for="cvCode">
+                            CV CODE</label>
+                        <input type="password" class="form-control" id="cvCode" placeholder="CV" name="cvv"
+                            [(ngModel)]="cvv" required />
+                    </div>
+                </div>
             </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#"><span class="badge pull-right">
 
-
-        </div>
+                            <span>&#x20B9;</span>{{amount}}</span> Final Payment</a>
+                </li>
+            </ul>
+            <br />
+            <button type="submit" class="btn btn-success btn-lg btn-block" (click)="pay()">Pay</button>
+        </form>
+    </div>
+</div>

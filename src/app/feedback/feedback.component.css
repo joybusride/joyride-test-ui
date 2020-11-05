@@ -1,0 +1,28 @@
+h3{
+    text-align:center;
+}
+.feedbackForm{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    height:20%;
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: #f1f1f1;
+}
+label{
+    text-align:left ;
+}
+
+/* .checked{
+    color: lightgray;
+} */
+#hideRadio [type=radio]{ 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+ 

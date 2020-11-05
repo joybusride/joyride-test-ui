@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-payment',
@@ -11,14 +12,16 @@ export class CardPaymentComponent implements OnInit {
   month;
   year;
   cvv;
+  amount:number=0;
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   pay(){
     console.log("Payment successful");
+    this.router.navigate(['/feedback'])
   }
 
 }

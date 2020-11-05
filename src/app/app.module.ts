@@ -26,6 +26,8 @@ import { BusListComponent } from './bus-list/bus-list.component';
 import { AddPassengerComponent } from './add-passenger/add-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SeatgridComponent } from './seatgrid/seatgrid.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { RegisterComponent } from './register/register.component';
     BusListComponent,
     AddPassengerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    SeatgridComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

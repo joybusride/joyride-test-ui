@@ -1,0 +1,111 @@
+<h3>Share your feedback with us!!!</h3>
+<form class="feedbackForm">
+    <div class="form-group">
+        <label for="exampleInputName">Your Name</label>
+        <input type="text" class="form-control" id="exampleInputName" aria-describedby="name" placeholder="Enter name">
+
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Your review</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="feedback">
+        <strong>Overall experience </strong><br />
+        <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Very Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Fair
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Poor
+        </label>
+    </div><br />
+    <div class="feedback">
+        <strong>Timely Response</strong><br />
+        <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Very Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Fair
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Poor
+        </label>
+    </div><br />
+    <div class="feedback">
+        <strong>Overall satisfaction </strong><br />
+        <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Very Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Fair
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Poor
+        </label>
+    </div><br />
+    <div class="feedback">
+        <strong>Our support </strong><br />
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Very Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Good
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Fair
+        </label>
+        <label class="radio-inline">
+            <input type="radio" name="optradio">Poor
+        </label>
+    </div><br />
+
+    <strong> Want to rate with us for customer services?</strong><br />
+    <div class="rate-container">
+        <div id="hideRadio">
+            <label class="radio-inline">
+                <input type="radio" name="rating" value="1" (click)="checkRating(1)" [checked]='true'>
+                <span class="fa fa-star unchecked" style="font-size: 20px;"></span>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="rating" value="2" (click)="checkRating(2)">
+                <span class="fa fa-star " style="font-size: 20px;"></span>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="rating" value="3" (click)="checkRating(3)">
+                <span class="fa fa-star " style="font-size: 20px;"></span>
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="rating" value="4" (click)="checkRating(4)">
+                <span class="fa fa-star " style="font-size: 20px;"></span>
+            </label>
+
+            <label class="radio-inline">
+                <input type="radio" name="rating" value="5" (click)="checkRating(5)">
+                <span class="fa fa-star" style="font-size: 20px;"></span>
+            </label>
+        </div>
+
+    </div>
+    <div id="rate"></div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <br/><br/>
+</form>
