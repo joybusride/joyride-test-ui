@@ -1,6 +1,6 @@
 <div class="bus">
  
-    <div *ngIf="adddetails">
+    <div>
       <table class="buslist" style="border:2px solid ; margin: 10px;">
         <tr class="columnlist" style="padding: 80px;height: 40px;">
           <th>Traveller</th>
@@ -8,23 +8,25 @@
           <th>Arrival Time</th>
           <th>From</th>
           <th>To</th>
+          <th>Seats Left</th>
           <th>Seats </th>
           <th>Fare</th>
           <th>Distance</th>
           <th>Booking Option</th>
         </tr>
 
-        <tr class="attributes" *ngFor="let b of busdetails">
+        <tr class="attributes" *ngFor="let b of state">
           <ng-container>
-            <td>{{b.BusName  }}</td>
-            <td>{{b.DepartureTime }}</td>
-            <td>{{b.ArrivalTime }}</td>
-            <td>{{b.From }}</td>
-            <td>{{ b.To }}</td>
-            <td>{{b.Seats }}</td>
-            <td>{{b.Fare  }}</td>
-            <td>{{ b.Distance}}</td>
-            <td><button type="submit" class="btn btn-primary" style=" margin: 10px;">Book</button></td>
+            <td>{{b.busName  }}</td>
+            <td>{{b.departTime }}</td>
+            <td>{{b.arrivalTime }}</td>
+            <td>{{b.source }}</td>
+            <td>{{ b.destination }}</td>
+            <td>{{b.seatsLeft }}</td>
+            <td>{{b.noOfSeats }}</td>
+            <td>{{b.fare  }}</td>
+            <td>{{ b.distance}}</td>
+            <td><button type="submit" class="btn btn-primary" (click)="bookThisBus(b)" style=" margin: 10px;">Book</button></td>
           </ng-container>
         </tr>
       </table>

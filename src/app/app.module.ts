@@ -26,6 +26,11 @@ import { BusListComponent } from './bus-list/bus-list.component';
 import { AddPassengerComponent } from './add-passenger/add-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginHomePageComponent } from './login-home-page/login-home-page.component';
+import { HomeComponentExtrasComponent } from './home-component-extras/home-component-extras.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SearchBusService } from './search-bus.service';
+import { CoachBusService } from './coach-bus.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,9 @@ import { RegisterComponent } from './register/register.component';
     BusListComponent,
     AddPassengerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginHomePageComponent,
+    HomeComponentExtrasComponent
   ],
   imports: [
     BrowserModule,
@@ -58,10 +65,12 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     SidebarModule.forRoot(),
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+
 
   ],
-  providers: [],
+  providers: [SearchBusService,CoachBusService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

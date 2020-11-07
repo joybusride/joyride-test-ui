@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Bus } from '../bus';
 
 @Component({
   selector: 'app-add-passenger',
@@ -7,8 +9,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./add-passenger.component.css']
 })
 export class AddPassengerComponent implements OnInit {
-
-  constructor() { }
+    bus
+  constructor(private router:Router) { 
+    let navigation = this.router.getCurrentNavigation();
+    this.bus = navigation.extras.state as Bus
+    console.log("This is Add Passenger COMPONENT")  
+    console.log(this.bus)
+  }
 
   ngOnInit(): void {
   }

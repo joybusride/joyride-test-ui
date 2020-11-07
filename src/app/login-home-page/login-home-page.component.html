@@ -1,0 +1,60 @@
+<!-- Header Component -->
+
+<div class="complete-body">
+
+    <div class="header-component">
+        <app-top-header></app-top-header>
+    
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav">
+              <li ><a>  <div style="font-size:20px;position: fixed;" (click)="openNav()" *ngIf="false">&#9776; </div> </a> </li>>      
+              <li ><a [routerLink]="['']"><strong>Home</strong></a></li>
+              <li ><a [routerLink]="['/about']"><strong>About</strong></a></li>
+              <li><a [routerLink]="['/contact']"><strong>Contact Us</strong></a> </li>
+              <li><a [routerLink]="['/terms']"><strong>Terms of Use</strong></a> </li>
+    
+            </ul>
+          </div>
+        </nav>
+     </div>
+    
+    
+    
+    <div class="main-body">
+    <div class="row container" >
+      <div class="col-md-2">
+        <app-sidebnav-dashboard></app-sidebnav-dashboard>
+    
+      </div>
+        <div class="col-md-10" >
+          <div class="middle-body">   
+            <router-outlet></router-outlet>
+         </div>
+      </div>
+    </div> 
+    </div>
+    
+    
+     
+    
+    
+    
+    <!-- Footer Component -->
+    <div class="footer-component">
+    <app-footer></app-footer>
+    </div>
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

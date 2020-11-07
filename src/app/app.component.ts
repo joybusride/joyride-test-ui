@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavigationEnd,Router } from '@angular/router';
+import { NavigationEnd,Router,ActivatedRoute } from '@angular/router';
+import { parse } from 'url';
+
 
 @Component({
   selector: 'app-root',
@@ -9,16 +11,10 @@ import { NavigationEnd,Router } from '@angular/router';
 export class AppComponent {
   title = 'joyride-test-ui';
 
-  Contact:any[] = [
-    { firstName: 'Jane', lastName: 'Doe', phoneNumber: 7808009097 },
-    { firstName: 'John', lastName: 'Doe', phoneNumber:  7808009097},
-    { firstName: 'Sam', lastName: 'Curran', phoneNumber: 7808009097 },
-    { firstName: 'Kane', lastName: 'Williamnson', phoneNumber:7808009097  },
-    { firstName: 'Chris', lastName: 'Morris', phoneNumber:7808009097 },
-
-  ];
+ 
 
   isClicked=false;
+  status
 
   public activated: {
 		about: boolean;
@@ -26,7 +22,13 @@ export class AppComponent {
 		contact: boolean;
   };
   
-  constructor(	) { 
+  constructor(private route: ActivatedRoute	) { 
+  }
+
+  ngOnInit(){
+    let status= parseInt(this.route.snapshot.paramMap.get('status'))
+    this.status=status
+    
   }
 
   openNav() {
