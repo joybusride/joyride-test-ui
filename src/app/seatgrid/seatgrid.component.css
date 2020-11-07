@@ -5,6 +5,7 @@
     margin: auto;
     width:100%;
     overflow: visible;
+    padding-bottom: 45px;
     /* background: url('https://api.iconify.design/zmdi-seat.svg') no-repeat center center / contain;
     content: url('https://api.iconify.design/zmdi-seat.svg?height=2&inline=true');
     vertical-align: -0.125em; */
@@ -20,6 +21,34 @@
    
    
 
+
+}
+table,th,tr{
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+   
+ 
+} 
+td{
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+th {
+   
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:black;
+    color:rgb(231, 224, 224);
+  }
+.passengers{
+    text-align: center;
+    margin:auto;
+    width: 80%;
+    /* width: 100%; */
 }
 .seatgrid{
 
@@ -29,6 +58,7 @@
     border: 5px solid black;
     padding-left: 25px;
     padding-top: 25px;
+    
     
 }
 .row{
@@ -67,4 +97,11 @@ img{
  
  #bt{
      margin-left: 15px;
+ }
+ #btc{
+     size: 10px;
+     margin-left: 10px;
+ }
+ #pBtn{
+    margin-left: 15px;
  }

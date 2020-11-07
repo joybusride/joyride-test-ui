@@ -28,6 +28,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SeatgridComponent } from './seatgrid/seatgrid.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PassengerService } from './passenger.service';
+import { PayComponent } from './pay/pay.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +57,8 @@ import { FeedbackComponent } from './feedback/feedback.component';
     LoginComponent,
     RegisterComponent,
     SeatgridComponent,
-    FeedbackComponent
+    FeedbackComponent,
+    PayComponent
   ],
   imports: [
     BrowserModule,
@@ -62,10 +66,10 @@ import { FeedbackComponent } from './feedback/feedback.component';
     FormsModule,
     SidebarModule.forRoot(),
     RouterModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PassengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

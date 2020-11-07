@@ -11,6 +11,7 @@ import { CoachInfoComponent } from './coach-info/coach-info.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { LoginComponent } from './login/login.component';
+import { PayComponent } from './pay/pay.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchBusComponent } from './search-bus/search-bus.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'seat',component:SeatgridComponent},
   {path:'feedback',component:FeedbackComponent},
+  {path:'pay',component:PayComponent},
    
 ];
 

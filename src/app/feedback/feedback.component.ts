@@ -15,7 +15,7 @@ export class FeedbackComponent implements OnInit {
   checkRating(rate){
     this.rating=rate;
     console.log("Rating "+this.rating);
-     document.getElementById('rate').innerText="You rated us "+rate;
+    document.getElementById('rate').innerText="You rated us "+rate;
     //  var rb= document.getElementsByName('rating')
     // rb[0].style.backgroundColor = 'red';
   }

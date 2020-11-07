@@ -34,7 +34,7 @@ export class BusListComponent implements OnInit {
   }
   passengerList(){
     
-    this.router.navigate(['passenger-list'])
+    this.router.navigate(['passenger-list']);
   }
 
 }
