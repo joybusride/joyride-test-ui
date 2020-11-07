@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavigationExtras, Router } from '@angular/router';
 import { Bus } from '../bus';
 import { BusSearchQuery } from '../BusSearchQuery';
-import { BusDetails } from './Details';
+
 
 @Component({
   selector: 'app-bus-list',
@@ -12,6 +13,7 @@ import { BusDetails } from './Details';
 export class BusListComponent implements OnInit {
   state
   navigationExtras: NavigationExtras 
+
 
   constructor(private router:Router) {
     let navigation = this.router.getCurrentNavigation();

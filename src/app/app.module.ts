@@ -26,9 +26,13 @@ import { BusListComponent } from './bus-list/bus-list.component';
 import { AddPassengerComponent } from './add-passenger/add-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { SeatgridComponent } from './seatgrid/seatgrid.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PassengerService } from './passenger.service';
+import { PayComponent } from './pay/pay.component';
 import { LoginHomePageComponent } from './login-home-page/login-home-page.component';
 import { HomeComponentExtrasComponent } from './home-component-extras/home-component-extras.component';
-import { HttpClientModule } from '@angular/common/http';
 import { SearchBusService } from './search-bus.service';
 import { CoachBusService } from './coach-bus.service';
 
@@ -56,6 +60,9 @@ import { CoachBusService } from './coach-bus.service';
     AddPassengerComponent,
     LoginComponent,
     RegisterComponent,
+    SeatgridComponent,
+    FeedbackComponent,
+    PayComponent
     LoginHomePageComponent,
     HomeComponentExtrasComponent
   ],
@@ -67,10 +74,8 @@ import { CoachBusService } from './coach-bus.service';
     RouterModule,
     ReactiveFormsModule,
     HttpClientModule
-
-
   ],
-  providers: [SearchBusService,CoachBusService],
+  providers: [SearchBusService,CoachBusService,PassengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
