@@ -31,6 +31,10 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PassengerService } from './passenger.service';
 import { PayComponent } from './pay/pay.component';
+import { LoginHomePageComponent } from './login-home-page/login-home-page.component';
+import { HomeComponentExtrasComponent } from './home-component-extras/home-component-extras.component';
+import { SearchBusService } from './search-bus.service';
+import { CoachBusService } from './coach-bus.service';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,8 @@ import { PayComponent } from './pay/pay.component';
     SeatgridComponent,
     FeedbackComponent,
     PayComponent
+    LoginHomePageComponent,
+    HomeComponentExtrasComponent
   ],
   imports: [
     BrowserModule,
@@ -67,9 +73,9 @@ import { PayComponent } from './pay/pay.component';
     SidebarModule.forRoot(),
     RouterModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  providers: [PassengerService],
+  providers: [SearchBusService,CoachBusService,PassengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

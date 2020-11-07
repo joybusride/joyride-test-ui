@@ -1,23 +1,27 @@
+
 <div class="bus-info">
-    <h2>VRL Logistics</h2>
+    <h2>{{state.busName}}</h2>
     
     <div class="row">
             <div class="col-md-6" style="padding-top: 20px; padding-bottom: 20px;">
-                <h4>No. Of Seats: 50</h4>
+                <h4>No. Of Seats: {{state.noOfSeats}}</h4>
             </div>
             <div class="col-md-6" style="padding-top: 20px;">
-                <h4>Type:  AC</h4>
+                <h4>Type:  {{state.busType}}</h4>
             </div>
     </div>
 
     <div class="row">
 
         <div class="col-md-6">
-        <h4> Cost / Day :   &#x20B9; 5000</h4>
+        <h4> Cost / Day :   &#x20B9; {{state.costPerDay}}</h4>
         </div>
         <div class="col-md-6">
-            <span style="font-size: 18px;">No.of Days: </span>   
-            <input type="number" min="0" max="15" value="1">
+          
+            <span style="font-size: 18px;">No.of Days: </span> 
+            <form #coachInfo="ngForm" (ngSubmit)="test()">
+            <input type="number" min="0" max="15" value="1" name="noOfRentalDays" [(ngModel)]="state.noOfRentalDays">
+            </form>
         </div>
 
         <div class="col-md-12">
@@ -62,11 +66,11 @@
                 
                 <div class="row">
                     <div class="col-md-6">Cost/Day</div>
-                    <div class="col-md-6">5000</div>
+                    <div class="col-md-6">{{state.costPerDay}}</div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">No. of Days</div>
-                    <div class="col-md-6"> X 5</div>
+                    <div class="col-md-6"> X {{state.noOfRentalDays}}</div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">Gross Cost</div>
@@ -92,10 +96,12 @@
     <div class="row" style="padding-top: 40px;">
 
         <div class="col-md-4"></div>
-        <div class="col-md-4"> <button class="btn btn-success">
+        <div class="col-md-4">
+             <button class="btn btn-success">
               Proceed To Pay         
              <span class="glyphicon glyphicon-arrow-right" style="padding-left: 5px;"></span>
             </button>
+         
          </div>
         <div class="col-md-4"></div>
 
