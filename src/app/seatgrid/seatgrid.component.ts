@@ -4,6 +4,7 @@ import { Passenger } from '../passenger';
 import * as $ from "jquery";
 
 import { exit, hasUncaughtExceptionCaptureCallback } from 'process';
+import { BusBookingDetail } from '../bus-booking-detail';
 @Component({
     selector: 'app-seatgrid',
     templateUrl: './seatgrid.component.html',
@@ -14,6 +15,7 @@ export class SeatgridComponent {
     // @Output() seatsList:EventEmitter<string[]> = new EventEmitter<string[]>();
 
     state;
+    bookingDetail=new BusBookingDetail()
     navigationExtras: NavigationExtras
     //variable declarations
     showPassengers = false;
@@ -35,8 +37,13 @@ export class SeatgridComponent {
     constructor(private router: Router) {
 
         let navigation = this.router.getCurrentNavigation();
-        this.state = navigation.extras.state as Passenger
+        this.bookingDetail = navigation.extras.state as BusBookingDetail
+        this.state=this.bookingDetail.passengerList
+        // this.reserved=this.bookingDetail.bus.reservedSeats
         console.log("This is SEAT GRID COMPONENT")
+        // console.log(this.bookingDetail)
+        // console.log(this.bookingDetail.bus)
+        // console.log("Amount: "+this.bookingDetail.amount)
         console.log(this.state)
         console.log(this.state.length)
     }
@@ -98,7 +105,8 @@ export class SeatgridComponent {
     continue() {
 
         // this.router.navigate(['/card-payment'])
-        this.navigationExtras={state:this.state};
+        this.bookingDetail.passengerList=this.state
+        this.navigationExtras={state:this.bookingDetail};
         this.router.navigate(['/pay'],this.navigationExtras);
     }
     bookSeats() {

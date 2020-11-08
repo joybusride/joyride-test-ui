@@ -62,7 +62,7 @@ import { CoachBusService } from './coach-bus.service';
     RegisterComponent,
     SeatgridComponent,
     FeedbackComponent,
-    PayComponent
+    PayComponent,
     LoginHomePageComponent,
     HomeComponentExtrasComponent
   ],

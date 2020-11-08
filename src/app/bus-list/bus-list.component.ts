@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { NavigationExtras, Router } from '@angular/router';
 import { Bus } from '../bus';
 import { BusSearchQuery } from '../BusSearchQuery';
@@ -11,15 +10,15 @@ import { BusSearchQuery } from '../BusSearchQuery';
   styleUrls: ['./bus-list.component.css']
 })
 export class BusListComponent implements OnInit {
-  state
+  listOfBus:Bus
   navigationExtras: NavigationExtras 
 
 
   constructor(private router:Router) {
     let navigation = this.router.getCurrentNavigation();
-    this.state = navigation.extras.state as Bus
+    this.listOfBus = navigation.extras.state as Bus
     console.log("This is BUS LIST COMPONENT")  
-    console.log(this.state[0].distance)
+    console.log(this.listOfBus[0].distance)
    }
 
   ngOnInit(): void {

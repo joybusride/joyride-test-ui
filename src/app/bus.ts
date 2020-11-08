@@ -12,5 +12,5 @@ export class Bus{
     arrivalTime:Time;
 	fare:number;
 	distance:number;
-
+	reservedSeats:string[]
 }
