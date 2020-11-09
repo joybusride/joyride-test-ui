@@ -26,6 +26,13 @@ import { BusListComponent } from './bus-list/bus-list.component';
 import { AddPassengerComponent } from './add-passenger/add-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegSuccessComponent } from './reg-success/reg-success.component';
+import { RegFailComponent } from './reg-fail/reg-fail.component';
+import { LoginFailComponent } from './login-fail/login-fail.component';
+import { LoginSuccessComponent } from './login-success/login-success.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +57,12 @@ import { RegisterComponent } from './register/register.component';
     BusListComponent,
     AddPassengerComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ForgotPasswordComponent,
+    RegSuccessComponent,
+    RegFailComponent,
+    LoginFailComponent,
+    LoginSuccessComponent
   ],
   imports: [
     BrowserModule,
@@ -58,8 +70,9 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     SidebarModule.forRoot(),
     RouterModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
