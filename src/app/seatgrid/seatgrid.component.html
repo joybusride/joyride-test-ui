@@ -1,0 +1,126 @@
+<div class="container">
+    <main class="innerContainer">
+        <div class="heading" id="seatHeader1">
+            <h3>Select your seat</h3>
+        </div>
+
+        <!-- Showing a static legend bar -->
+        <div class="legend" id="seatHeader2">
+            <!-- <span class="iconify a" data-icon="zmdi-seat" data-inline="false" style='font-size:20px;color:black; background-color: grey'></span>Available
+            <span class="iconify b" data-icon="zmdi-seat" data-inline="false" style='font-size:20px;color:black;background-color: darkgray'></span>Booked
+            <span class="iconify c" data-icon="zmdi-seat" data-inline="false" style='font-size:20px;color:black;background-color: white'></span>Selected
+            -->
+            <i class='glyphicon glyphicon-ok-sign' style='font-size:20px;color:green'></i>Available
+            <i class='glyphicon glyphicon-ban-circle' style='font-size:20px;color:red'></i>Booked
+            <i class='glyphicon glyphicon-thumbs-up' style='font-size:20px;color:blue'></i>Selected
+
+        </div>
+        <br />
+        <br />
+        <!-- Generate the seating grid -->
+        <div class="seatgrid" id="seatSelector">
+            <div *ngFor="let row of rows">
+                <div class="row">
+                    <div class="col-sm-4" style="padding-left:5px ;"><span class="seat" id="seatLeft"
+                            *ngFor="let colL of colsleft" (click)="seatClicked(row + colL)"
+                            [ngSwitch]="getStatus(row + colL)">
+                            <span *ngSwitchCase="'selected'" class='glyphicon glyphicon-thumbs-up'
+                                style='font-size:20px;color:blue'> </span>
+                            <span *ngSwitchCase="'reserved'" class='glyphicon glyphicon-ban-circle'
+                                style='font-size:20px;color:red'> </span>
+                            <span *ngSwitchDefault class='glyphicon glyphicon-ok-sign'
+                                style='font-size:20px;color:green'></span>
+                        </span>
+                        <br />
+                        <br />
+
+                    </div>
+                    <div class="col-sm-8"><span class="seat" id="seatRight" *ngFor="let colR of colsright"
+                            (click)="seatClicked(row + colR)" [ngSwitch]="getStatus(row + colR)">
+                            <span *ngSwitchCase="'selected'" class='glyphicon glyphicon-thumbs-up'
+                                style='font-size:20px;color:blue'> </span>
+                            <span *ngSwitchCase="'reserved'" class='glyphicon glyphicon-ban-circle'
+                                style='font-size:20px;color:red'> </span>
+                            <span *ngSwitchDefault class='glyphicon glyphicon-ok-sign'
+                                style='font-size:20px;color:green'></span>
+                        </span>
+                        <br />
+                        <br />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <br />
+        <div id="buttons">
+            <button type="button" class="btn btn-primary mb-2" [disabled]="selected.length !== state.length"
+                (click)="bookSeats()">Book
+                Seats</button>
+            <button (click)="clearSelected()" [disabled]="selected.length === 0" class="btn btn-default btn-sm"
+                id="btc">Clear</button>
+            <br />
+        </div>
+        <!-- Structural directive - only visible on selection -->
+        <div *ngIf="selected.length > 0" class="font14 marginTB10">
+            <!-- <div class="wordWrap">SEATS RESERVED : {{selected.length}} <span class="count"></span></div>
+            <div class="seatnumbers">
+                <div *ngFor="let s of selected;let i=index;">
+                    {{selected[i]}}
+                </div>
+            </div> 
+            <br />
+            <br />
+            <div>PRICE : {{ticketPrice}} * {{selected.length}} = {{currency}}.{{ticketPrice*selected.length}} </div>
+            <div>CONVENIENCE FEE : {{currency}}.{{convFee}}</div>
+            <div>TOTAL : {{currency}}.{{ticketPrice * selected.length + convFee}}</div>
+            <br />-->
+        </div>
+        <!--For displaying passenger list-->
+        <div class="passengerList">
+            <div *ngIf="showPassengers">
+                <div>PRICE : {{ticketPrice}} * {{selected.length}} = {{currency}}.{{ticketPrice*selected.length}} </div>
+                <div>CONVENIENCE FEE : {{currency}}.{{convFee}}</div>
+                <div>TOTAL : {{currency}}.{{ticketPrice * selected.length + convFee}}</div>
+                <br />
+                <table class="passenger">
+
+                    <tr>
+                        <th>Passenger Name</th>
+                        <th>Gender</th>
+                        <th>Age</th>
+                        <th>Seat Number</th>
+                    </tr>
+
+                    <tr *ngFor="let p of state">
+                        <td>{{p.firstName+" "+p.lastName}}</td>
+                        <td>{{p.gender}}</td>
+                        <td>{{p.age}}</td>
+                        <td>{{p.seatNumber}}</td>
+                    </tr>
+
+                </table>
+                <a [routerLink]="['/passenger' ]"><button class="btn btn-primary mb-2">Back</button></a>
+                <button  (click)="continue()" [disabled]="selected.length === 0"
+                        class="btn btn-success btn-sm" id="pBtn">Continue Booking</button>
+            </div>
+
+        </div>
+
+        <!-- <div class="pay">
+            <p>How do you wish to pay?</p>
+            <div class="buttonBar marginTop5">
+                <a [routerLink]="['/card-payment']"><button (click)="cardPayment()" [disabled]="selected.length === 0"
+                        class="btn btn-success btn-sm">Pay
+                        using Card</button></a>
+                <a [routerLink]="['/walletpayment']"><button (click)="showSelected()" disabled id="bt"
+                        class="btn btn-success btn-sm">Pay
+                        using Wallet
+                    </button></a>
+            </div>
+            <br />
+            <button (click)="clearSelected()" [disabled]="selected.length === 0"
+                class="btn btn-default btn-sm">Clear</button> </div> -->
+
+    </main>
+</div>

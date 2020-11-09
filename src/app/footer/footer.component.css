@@ -4,7 +4,8 @@
     flex-grow: 0;
     background: #333333 ;
     padding: 3px 15px;
-    position: relative;
+    /* position: relative; */
+    position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;

@@ -3,6 +3,7 @@
     overflow-wrap: break-word;
     padding-top: 30px;
     padding-bottom: 30px;
+    text-decoration: none;
 }
 
 .row{
@@ -12,4 +13,17 @@
 
 #reg{
     padding-top: 10px;
+    width: 320px;
+
+}
+
+.bottom{
+    margin-left: 80px;
+}
+
+#reg1{
+    padding-top: 20px;
+    margin-left: 10px;
+    padding-right: 40px;
+    width: 350px;
 }
