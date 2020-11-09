@@ -1,0 +1,107 @@
+
+.container{
+
+    text-align: center;
+    margin: auto;
+    width:100%;
+    overflow: visible;
+    padding-bottom: 45px;
+    /* background: url('https://api.iconify.design/zmdi-seat.svg') no-repeat center center / contain;
+    content: url('https://api.iconify.design/zmdi-seat.svg?height=2&inline=true');
+    vertical-align: -0.125em; */
+
+}
+.heading{
+
+    margin: auto;
+    width:20%; 
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+   
+   
+
+
+}
+table,th,tr{
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+   
+ 
+} 
+td{
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+th {
+   
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color:black;
+    color:rgb(231, 224, 224);
+  }
+.passengers{
+    text-align: center;
+    margin:auto;
+    width: 80%;
+    /* width: 100%; */
+}
+.seatgrid{
+
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    border: 5px solid black;
+    padding-left: 25px;
+    padding-top: 25px;
+    
+    
+}
+.row{
+    /* background-color:rgb(233, 222, 222); */
+    padding-left: 5px;
+}
+img{
+    height: 30px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.btn-align{
+    float: right;
+    padding-top: 10px;    
+}
+.nav2{
+    margin-top: 0px;
+
+}
+.header{
+    margin-bottom: 0px;
+}
+.footer {
+   margin-top: 15px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+    border-radius: 5px;
+    background-color:black;
+    color:grey;
+    text-align: center;
+    
+ }
+ 
+ #bt{
+     margin-left: 15px;
+ }
+ #btc{
+     size: 10px;
+     margin-left: 10px;
+ }
+ #pBtn{
+    margin-left: 15px;
+ }

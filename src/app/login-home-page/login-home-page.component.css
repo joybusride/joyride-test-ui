@@ -1,0 +1,14 @@
+.middle-body{
+    padding-top: 120px;
+    margin-top: 50px;
+}
+
+
+
+.header-component{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 100000;
+ 
+}

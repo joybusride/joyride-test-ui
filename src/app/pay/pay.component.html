@@ -1,0 +1,11 @@
+<div class="payment">
+    <p>How do you wish to pay?</p>
+    <div class="buttonBar marginTop5">
+        <button (click)="cardPayment()" [disabled]="this.state.length === 0" class="btn btn-success btn-sm">Pay
+            using Card</button>
+        <button disabled id="bt" class="btn btn-success btn-sm">Pay
+            using Wallet
+        </button>
+    </div>
+    <br />
+</div>

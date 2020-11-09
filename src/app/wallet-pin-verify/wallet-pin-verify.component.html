@@ -1,6 +1,6 @@
 <div class="element" >
 <label class="form-label">Enter Wallet Pin</label>
-<form   #f=ngForm (ngSubmit)="onVerify()" ><div class="confirmation_code_group">
+<form   #f="ngForm" (ngSubmit)="onVerify()" ><div class="confirmation_code_group">
     <div class="split_input_item input_wrapper"><input type="number" name="f" pattern="/^\d{1}$/" class="inline_input" maxlength="1" min="1" max="9"></div>
     <div class="split_input_item input_wrapper"><input type="number" name="s" class="inline_input" maxlength="1" min="1" max="9"></div>
     <div class="split_input_item input_wrapper"><input type="number" name="t"  class="inline_input" maxlength="1" min="1" max="9"></div>

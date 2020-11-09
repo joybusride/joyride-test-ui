@@ -2,6 +2,16 @@
 .panel-title {display: inline;font-weight: bold;}
 .checkbox.pull-right { margin: 0; }
 .pl-ziro { padding-left: 0px; }
+.card{
+    width:50%;
+    margin: auto;
+    background-color: #f1f1f1;
+}
+h3{
+    text-align: center;
+    margin-left:300px;
+    
+}
 /* .container{
 
     margin-top: 20px;

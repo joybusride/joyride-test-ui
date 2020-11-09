@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class TopHeaderComponent implements OnInit {
 
+  status:boolean
   constructor(private router:Router) { }
 
   ngOnInit(): void {
@@ -21,5 +22,11 @@ export class TopHeaderComponent implements OnInit {
     this.router.navigate(['/register'])
   }
 
+  checking(){
+    // session logic 
+    // store login status in the sessions
+    this.status=true
+    this.router.navigate(['/login',1])
+  }
 
 }

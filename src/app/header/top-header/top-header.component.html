@@ -4,8 +4,11 @@
         <a class="navbar-brand" [routerLink]="['/']">
        <img src="../../assets/Joyride-logo.png"></a>
       </div>
-      <div class="btn-align">
-        <button class="btn btn-success" id="signup" type="submit" (click)="registerForm()"> 
+    
+      <div class="btn-align" >
+        <!-- (click)="registerForm()" -->
+        <div class="btns" *ngIf="true">
+        <button class="btn btn-success" id="signup" type="submit" (click)="registerForm()" > 
           <span class="glyphicon glyphicon-user">
           </span>
             Signup
@@ -15,6 +18,16 @@
           </span>
           Login 
         </button>
-    </div>
+      </div>
+
+        <div class="profile-btn" *ngIf="false">
+          <button class="btn btn-success"> profile</button>
+        </div>
+
+      </div>
+
+      
+
+
     </div>   
   </nav>

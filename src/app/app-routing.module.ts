@@ -9,10 +9,13 @@ import { CardPaymentComponent } from './card-payment/card-payment.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
 import { CoachInfoComponent } from './coach-info/coach-info.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 import { LoginComponent } from './login/login.component';
+import { PayComponent } from './pay/pay.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchBusComponent } from './search-bus/search-bus.component';
+import { SeatgridComponent } from './seatgrid/seatgrid.component';
 import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { WalletPageComponent } from './wallet-page/wallet-page.component';
 import { WalletPinVerifyComponent } from './wallet-pin-verify/wallet-pin-verify.component';
@@ -43,8 +46,10 @@ const routes: Routes = [
   {path:'reg-fail',component:RegFailComponent},
   {path:'login-success',component:LoginSuccessComponent},
   {path:'login-fail',component:LoginFailComponent}
-
-
+  {path:'seat',component:SeatgridComponent},
+  {path:'feedback',component:FeedbackComponent},
+  {path:'pay',component:PayComponent},
+   
 ];
 
 @NgModule({

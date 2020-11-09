@@ -13,12 +13,11 @@
     z-index: 100000;
  
 }
-/* 
-.main-body{
-    background-image: url('../assets/bus-background.jpg');
-      height: 100vh;  
-     position: relative;  
-    background-size: 100% 100%;
-}  */
+
+
+.extra-body{
+    padding-top: 90px;
+    margin-top: 50px;
+}
 
 

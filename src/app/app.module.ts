@@ -27,12 +27,20 @@ import { AddPassengerComponent } from './add-passenger/add-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegSuccessComponent } from './reg-success/reg-success.component';
 import { RegFailComponent } from './reg-fail/reg-fail.component';
 import { LoginFailComponent } from './login-fail/login-fail.component';
 import { LoginSuccessComponent } from './login-success/login-success.component';
+import { SeatgridComponent } from './seatgrid/seatgrid.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PassengerService } from './passenger.service';
+import { PayComponent } from './pay/pay.component';
+import { LoginHomePageComponent } from './login-home-page/login-home-page.component';
+import { HomeComponentExtrasComponent } from './home-component-extras/home-component-extras.component';
+import { SearchBusService } from './search-bus.service';
+import { CoachBusService } from './coach-bus.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +70,13 @@ import { LoginSuccessComponent } from './login-success/login-success.component';
     RegSuccessComponent,
     RegFailComponent,
     LoginFailComponent,
-    LoginSuccessComponent
+    LoginSuccessComponent,
+    SeatgridComponent,
+    FeedbackComponent,
+    PayComponent,
+    LoginHomePageComponent,
+    HomeComponentExtrasComponent
+
   ],
   imports: [
     BrowserModule,
@@ -74,7 +88,7 @@ import { LoginSuccessComponent } from './login-success/login-success.component';
     BrowserAnimationsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SearchBusService,CoachBusService,PassengerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
