@@ -1,33 +1,41 @@
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" [routerLink]="['/']">
-       <img src="../../assets/Joyride-logo.png"></a>
-      </div>
-    
-      <div class="btn-align" >
-        <!-- (click)="registerForm()" -->
-        <div class="btns" *ngIf="true">
-        <button class="btn btn-success" id="signup" type="submit" (click)="registerForm()" > 
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <img src="../../assets/Joyride-logo.png"></a>
+    </div>
+
+    <div class="btn-align">
+      <!-- (click)="registerForm()" -->
+      <div class="btns" *ngIf="!status">
+        <button class="btn btn-success" id="signup" type="submit" (click)="registerForm()">
           <span class="glyphicon glyphicon-user">
           </span>
-            Signup
+          Signup
         </button>
-        <button class="btn btn-primary" type="submit" (click)="loginForm()"> 
+        <button class="btn btn-primary" type="submit" (click)="loginForm()">
           <span class="glyphicon glyphicon-log-in">
           </span>
-          Login 
+          Login
         </button>
       </div>
 
-        <div class="profile-btn" *ngIf="false">
-          <button class="btn btn-success"> profile</button>
-        </div>
+      <div class="profile-btn" *ngIf="status">
+        <!-- <button class="btn btn-success"> profile</button> -->
 
+        <button  type="submit"(click)="myFunction()" class="btn btn-success">Profile</button>
+        <div class="dropdown">
+          <select (change)="onChange($event.target.value)">
+            <option value="SeeProfile">View Profile</option>
+            <option value="Signout">Sign Out</option>
+          </select>
+        </div>
       </div>
 
-      
+    </div>
 
 
-    </div>   
-  </nav>
+
+
+  </div>
+</nav>

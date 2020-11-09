@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { BusBookingDetail } from '../bus-booking-detail';
+import { PassengerService } from '../passenger.service';
 
 @Component({
   selector: 'app-card-payment',
@@ -17,7 +18,7 @@ export class CardPaymentComponent implements OnInit {
   bookingDetail=new BusBookingDetail()
   navigationExtras: NavigationExtras
 
-  constructor(private router:Router) { 
+  constructor(private passengerService:PassengerService ,private router:Router) { 
     let navigation = this.router.getCurrentNavigation();
     this.bookingDetail = navigation.extras.state as BusBookingDetail
     console.log("This is CARD PAYMENT COMPONENT")
@@ -31,7 +32,17 @@ export class CardPaymentComponent implements OnInit {
 
   pay(){
     console.log("Payment successful");
-    this.router.navigate(['/feedback'])
+    console.log(this.bookingDetail.passengerList)
+   this.passengerService.addPassenger(this.bookingDetail.passengerList).subscribe(data => {
+    //alert(JSON.stringify(data));
+    if (data.status == 'SUCCESS') {
+      this.router.navigate(['/feedback'])
+    }
+    else { 
+    alert(data.status);
+    }
+  })
+    // this.router.navigate(['/feedback'])
   }
 
 }

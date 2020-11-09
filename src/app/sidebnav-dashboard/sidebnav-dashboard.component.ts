@@ -7,22 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebnavDashboardComponent implements OnInit {
 
-   
-  opened=true;
 
+  opened = true;
+  LStatus: boolean
+  statusLogin;
   // toggleSlidebar(){
   //   this.opened=!this.opened;
   // }
-  constructor() { }
+  constructor() {
+
+    this.statusLogin = sessionStorage.getItem('loginStatus');
+    console.log(this.statusLogin);
+    this.LStatus = Boolean(JSON.parse(this.statusLogin));
+    console.log(this.LStatus);
+   }
 
   ngOnInit(): void {
   }
 
-   openNav() {
+  openNav() {
     document.getElementById("mySidenav").style.width = "150px";
   }
-  
-   closeNav() {
+
+  closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from "../login.service";
 import { Login } from "../login";
 import { UserService } from '../user.service';
@@ -19,9 +19,9 @@ export class LoginComponent implements OnInit {
 
   login: Login = new Login();
   message: string;
+  loginStatus="false";
   
-  
-  constructor(private fb: FormBuilder,private loginService: LoginService,private router:Router) {
+  constructor(private fb: FormBuilder,private loginService: LoginService,private router:Router,private route:ActivatedRoute) {
     this.createForm();
    }
 
@@ -45,12 +45,22 @@ export class LoginComponent implements OnInit {
         let userId = data.userId;
         let userFirstName = data.firstName;
         let userLastName =data.lastName
-       
+        this.loginStatus="true";
         sessionStorage.setItem('userId', String(userId));
    
         sessionStorage.setItem('userFirstName', userFirstName);
         sessionStorage.setItem('userLastName', userLastName);
-        this.router.navigate(['login-success']);
+        sessionStorage.setItem('loginStatus',this.loginStatus);
+        // this.router.navigate(['']);
+        this.router.navigate(['']).then(()=>{
+          window.location.reload();
+        });
+        //this.router.navigate(['/login-success']);
+        // this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        // this.router.onSameUrlNavigation = 'reload';
+        // this.router.navigate([''],{ relativeTo: this.route });
+        // window.open('', '_self');
+        
       }
       else {
         this.message = data.message;

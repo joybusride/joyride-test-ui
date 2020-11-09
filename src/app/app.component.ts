@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd,Router,ActivatedRoute } from '@angular/router';
+import { NavigationEnd, Router, ActivatedRoute } from '@angular/router';
 import { parse } from 'url';
 
 
@@ -7,28 +7,40 @@ import { parse } from 'url';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-})  
+})
 export class AppComponent {
   title = 'joyride-test-ui';
 
- 
 
-  isClicked=false;
-  status
+
+  isClicked = false;
+  status;
+  LStatus: boolean
+  statusLogin;
+
 
   public activated: {
-		about: boolean;
-		terms: boolean;
-		contact: boolean;
+    about: boolean;
+    terms: boolean;
+    contact: boolean;
   };
-  
-  constructor(private route: ActivatedRoute	) { 
+
+  constructor(private route: ActivatedRoute) {
+
+    this.statusLogin = sessionStorage.getItem('loginStatus');
+    console.log(this.statusLogin);
+    this.LStatus = Boolean(JSON.parse(this.statusLogin));
+    console.log(this.LStatus);
+
   }
 
-  ngOnInit(){
-    let status= parseInt(this.route.snapshot.paramMap.get('status'))
-    this.status=status
+
+
+  ngOnInit() {
+    let status = parseInt(this.route.snapshot.paramMap.get('status'))
+    this.status = status;
     
+
   }
 
   openNav() {

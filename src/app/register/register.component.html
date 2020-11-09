@@ -1,69 +1,100 @@
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+
 <div class="normal">
-  
-
-
-<div class="big-image  modal modal-content animate ">
+  <div class="big-image  modal modal-content animate ">
     <div class="container">
       <h1>Registration Form</h1>
       <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-        
         <div class="form-row mb-4">
-          <div class="col col-md-6">
+          <div class="col">
             <label>First name <span class="lblError">*</span></label>
-                <input [class.is-invalid]="registrationForm.get('firstName').invalid && registrationForm.get('firstName').touched" formControlName="firstName" type="text" placeholder="Enter first name" [(ngModel)]=user.firstName class="form-control">
-                 <small [class.d-none]="registrationForm.get('firstName').valid || registrationForm.get('firstName').untouched" class="text-danger">First name required</small>
-       
-            </div> 
-          <div class="col col-md-6">
+            
+            <input
+           [class.is-invalid]="registrationForm.get('firstName').invalid && registrationForm.get('firstName').untouched" 
+              formControlName="firstName" type="text" placeholder="Enter first name" [(ngModel)]=user.firstName
+              class="form-control" required>
+            <small
+            *ngIf ="registrationForm.get('firstName').invalid && registrationForm.get('firstName').touched"
+              class="text-danger">First name required</small>
+          </div>
+          <div class="col">
             <label>Last name <span class="lblError">*</span></label>
-              <input [class.is-invalid]="registrationForm.get('lastName').invalid && registrationForm.get('lastName').touched" formControlName="lastName" type="text" placeholder="Enter last name" [(ngModel)]=user.lastName  class="form-control">
-                 <small [class.d-none]="registrationForm.get('lastName').valid || registrationForm.get('lastName').untouched" class="text-danger">last name required</small>
-       
-            </div>
-      </div>
-    
+            <input
+              [class.is-invalid]="registrationForm.get('lastName').invalid && registrationForm.get('lastName').touched"
+              formControlName="lastName" type="text" placeholder="Enter last name" [(ngModel)]=user.lastName
+              class="form-control">
+            <small *ngIf="registrationForm.get('lastName').invalid && registrationForm.get('lastName').touched"
+              class="text-danger">last name required</small>
+          </div>
+        </div>
+
+
         <div class="form-group">
           <label>Email <span class="lblError">*</span></label>
-          <input [class.is-invalid]="registrationForm.get('email').invalid && registrationForm.get('email').touched" formControlName="email" type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Enter your email" [(ngModel)]=user.email required>
-          <small *ngIf="registrationForm.get('email').hasError('required')  && registrationForm.get('email').touched" class="text-danger"> Email required!</small>
+          <input [class.is-invalid]="registrationForm.get('email').invalid && registrationForm.get('email').touched"
+            formControlName="email" type="text" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            placeholder="Enter your email" [(ngModel)]=user.email required>
+          <small *ngIf="registrationForm.get('email').hasError('required')  && registrationForm.get('email').touched"
+            class="text-danger"> Email required!</small>
           <small *ngIf="registrationForm.get('email').hasError('pattern')" class="text-danger">Invalid email!</small>
-    
+
         </div>
-      
+
         <div class="form-group col-md-6">
           <label>Password <span class="lblError">*</span></label>
-          <input   [class.is-invalid]="registrationForm.get('password').invalid && registrationForm.get('password').touched" formControlName="password" type="password" class="form-control"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password" [(ngModel)]=user.password required>
-          <small *ngIf="registrationForm.get('password').hasError('required')  && registrationForm.get('password').touched" style="color:red;"> Password required!</small>
-          <small *ngIf="registrationForm.get('password').hasError('pattern')" style="color:red;">Invalid Password!</small>
-    
+          <input
+            [class.is-invalid]="registrationForm.get('password').invalid && registrationForm.get('password').touched"
+            formControlName="password" type="password" class="form-control"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter your password" [(ngModel)]=user.password
+            required>
+          <small
+            *ngIf="registrationForm.get('password').hasError('required')  && registrationForm.get('password').touched"
+            style="color:red;"> Password required!</small>
+          <small *ngIf="registrationForm.get('password').hasError('pattern')" style="color:red;">Invalid
+            Password!</small>
+
         </div>
-      
+
         <div class="form-group col-md-6">
           <label>Confirm Password <span class="lblError">*</span></label>
-          <input  [class.is-invalid]="registrationForm.get('confirmPassword').invalid && registrationForm.get('confirmPassword').touched" formControlName="confirmPassword" type="password" class="form-control" placeholder="Re-enter your password"  [(ngModel)]=user.confirmPassword required>
-          <small *ngIf="registrationForm.get('confirmPassword').hasError('required')  && registrationForm.get('confirmPassword').touched" style="color:red;"> Password required!</small>
-          <small *ngIf="registrationForm.get('confirmPassword').hasError('passwordMismatch')" style="color:red;">Password does not match!</small>
-    
+          <input
+            [class.is-invalid]="registrationForm.get('confirmPassword').invalid && registrationForm.get('confirmPassword').touched"
+            formControlName="confirmPassword" type="password" class="form-control" placeholder="Re-enter your password"
+            [(ngModel)]=user.confirmPassword required>
+          <small
+            *ngIf="registrationForm.get('confirmPassword').hasError('required')  && registrationForm.get('confirmPassword').touched"
+            style="color:red;"> Password required!</small>
+          <small *ngIf="registrationForm.get('confirmPassword').hasError('passwordMismatch')"
+            style="color:red;">Password does not match!</small>
+
         </div>
-    
+
         <div class="form-group">
           <label>Contact Number <span class="lblError">*</span></label>
-          <input  ng-keypress="count = count + 1" ng-init="count=0"  [class.is-invalid]="registrationForm.get('contactNumber').invalid && registrationForm.get('contactNumber').touched" formControlName="contactNumber" maxlength="10"  type="number" class="form-control" pattern="^((\\+91-?)|0)?[0-9]{10}$" placeholder="Enter your contact No" [(ngModel)]=user.contactNumber  required>
-           <small *ngIf="registrationForm.get('contactNumber').hasError('required')  && registrationForm.get('contactNumber').touched" style="color:red;">Contact number required!</small>
-           <small *ngIf="registrationForm.get('contactNumber').hasError('pattern')" style="color:red;">Contact Number must be 10 digits!</small>
-    
-        </div><br/>
-      
+          <input ng-keypress="count = count + 1" ng-init="count=0"
+            [class.is-invalid]="registrationForm.get('contactNumber').invalid && registrationForm.get('contactNumber').touched"
+            formControlName="contactNumber" maxlength="10" type="number" class="form-control"
+            pattern="^((\\+91-?)|0)?[0-9]{10}$" placeholder="Enter your contact No" [(ngModel)]=user.contactNumber
+            required>
+          <small
+            *ngIf="registrationForm.get('contactNumber').hasError('required')  && registrationForm.get('contactNumber').touched"
+            style="color:red;">Contact number required!</small>
+          <small *ngIf="registrationForm.get('contactNumber').hasError('pattern')" style="color:red;">Contact Number
+            must be 10 digits!</small>
+
+        </div><br />
+
         <div class="form-row mb-4">
           <div class="col col-md-6">
             <button class="btn btn-primary" type="submit" [disabled]="registrationForm.invalid">Register</button>
-            </div> 
+          </div>
           <div class="col col-md-6">
             <button class="btn btn-secondary" type="reset">Cancel</button>
-            </div>
-      </div>
-    
+          </div>
+        </div>
+
       </form>
     </div>
-    </div>
+  </div>
 </div>

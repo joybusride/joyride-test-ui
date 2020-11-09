@@ -1,6 +1,6 @@
 <!-- <br><br><br><br><br> -->
 <!-- <div style="font-size:30px;cursor:pointer;margin-top: 120px;position: fixed;" (click)="openNav()" *ngIf="true">&#9776; </div> -->
-<div id="mySidenav" class="sidenav" *ngIf="true">
+<div id="mySidenav" class="sidenav" *ngIf="LStatus">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()" >&times;</a>
   <a [routerLink]="['/']"><strong> Bookings</strong></a>
   <a [routerLink]="['/profile']"><strong>Profile</strong></a>

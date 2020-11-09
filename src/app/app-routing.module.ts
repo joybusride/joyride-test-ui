@@ -45,7 +45,7 @@ const routes: Routes = [
   {path:'reg-success',component:RegSuccessComponent},
   {path:'reg-fail',component:RegFailComponent},
   {path:'login-success',component:LoginSuccessComponent},
-  {path:'login-fail',component:LoginFailComponent}
+  {path:'login-fail',component:LoginFailComponent},
   {path:'seat',component:SeatgridComponent},
   {path:'feedback',component:FeedbackComponent},
   {path:'pay',component:PayComponent},

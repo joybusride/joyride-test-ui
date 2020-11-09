@@ -11,7 +11,7 @@ export class PassengerService {
 
   constructor(private http:HttpClient) { }
 
-  addPassenger(passenger:Passenger):Observable<Status>{
+  addPassenger(passenger:Passenger[]):Observable<Status>{
 
     let url = 'http://localhost:8080/addpassenger';
     return this.http.post<Status>(url, passenger);

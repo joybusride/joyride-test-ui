@@ -11,12 +11,12 @@ export class UserService {
   constructor(private http:HttpClient) { }
 
   register(user:User):Observable<Status>{
-    let url='http://localhost:8080/register';
+    let url='http://localhost:8989/register';
     return this.http.post<Status>(url,user);
   }
 
   fetchProfile(email: string) : Observable<User> {
-    let url='http://localhost:8080/profile?email='+email;
+    let url='http://localhost:8989/profile?email='+email;
     return this.http.get<User>(url);
   }
 }
