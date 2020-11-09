@@ -26,6 +26,12 @@ import { BusListComponent } from './bus-list/bus-list.component';
 import { AddPassengerComponent } from './add-passenger/add-passenger.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegSuccessComponent } from './reg-success/reg-success.component';
+import { RegFailComponent } from './reg-fail/reg-fail.component';
+import { LoginFailComponent } from './login-fail/login-fail.component';
+import { LoginSuccessComponent } from './login-success/login-success.component';
 import { SeatgridComponent } from './seatgrid/seatgrid.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -60,11 +66,17 @@ import { CoachBusService } from './coach-bus.service';
     AddPassengerComponent,
     LoginComponent,
     RegisterComponent,
+    ForgotPasswordComponent,
+    RegSuccessComponent,
+    RegFailComponent,
+    LoginFailComponent,
+    LoginSuccessComponent,
     SeatgridComponent,
     FeedbackComponent,
     PayComponent,
     LoginHomePageComponent,
     HomeComponentExtrasComponent
+
   ],
   imports: [
     BrowserModule,
@@ -73,6 +85,7 @@ import { CoachBusService } from './coach-bus.service';
     SidebarModule.forRoot(),
     RouterModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     HttpClientModule
   ],
   providers: [SearchBusService,CoachBusService,PassengerService],

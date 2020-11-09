@@ -1,3 +1,6 @@
-export class Status { 
-    status: string; 
-    message: string; }
+
+export class Status {
+    status: string;
+    message: string;
+}
+
