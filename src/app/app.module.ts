@@ -41,6 +41,7 @@ import { LoginHomePageComponent } from './login-home-page/login-home-page.compon
 import { HomeComponentExtrasComponent } from './home-component-extras/home-component-extras.component';
 import { SearchBusService } from './search-bus.service';
 import { CoachBusService } from './coach-bus.service';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { CoachBusService } from './coach-bus.service';
     FeedbackComponent,
     PayComponent,
     LoginHomePageComponent,
-    HomeComponentExtrasComponent
+    HomeComponentExtrasComponent,
+    TicketComponent
 
   ],
   imports: [

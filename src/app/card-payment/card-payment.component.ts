@@ -36,7 +36,7 @@ export class CardPaymentComponent implements OnInit {
    this.passengerService.addPassenger(this.bookingDetail.passengerList).subscribe(data => {
     //alert(JSON.stringify(data));
     if (data.status == 'SUCCESS') {
-      this.router.navigate(['/feedback'])
+      this.router.navigate(['/ticket-info'])
     }
     else { 
     alert(data.status);

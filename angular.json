@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "joyride-test-ui": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "joyride-test-ui"
+    }
+  },
+  "defaultProject": "joyride-test-ui",
+  "cli": {
+    "analytics": "4e83dd04-4d5e-4802-a2ca-2d09868fcfac"
+  }
 }

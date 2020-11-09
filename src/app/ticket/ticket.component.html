@@ -1,0 +1,58 @@
+
+<div class="ticket-info">
+<div>
+    <input type="button" value="Download" (click)="convetToPDF()" />
+  </div>
+
+  <pre>
+    <div id="content">
+    <div class="container">
+      <div class="card bg-light text-dark">
+        <div class="card-body">
+          <div class="ticket">
+            
+              <h2 style="font-style: oblique; font-weight:bold">JoyRide Ticket</h2>
+              <br /><br /><br />
+
+
+</div>
+<div>
+<table class="table table-bordered" id="contentToConvert">
+  <thead>
+    <tr class="head">
+      <th id="details"> Ticket Id</th>
+      <th id="details"> Transaction Id</th>
+      <th id="details">Traveller</th>
+      <th id="details">From</th>
+      <th id="details">To</th>
+      <th id="details">Passenger Name</th>
+      <th id="details">Seats Reserved</th>
+      <th id="details">Fare</th>
+      <th id="details">Distance</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info" *ngFor='let c of ticketList'>
+      <td>{{c.ticketId}}</td>
+      <td>{{c.transactionId}}</td>
+      <td>{{c.busName}}</td>
+      <td>{{c.fromPlace}}</td>
+      <td>{{c.toPlace}}</td>
+      <td>{{c.passengerName}}</td>
+      <td>{{c.seats}}</td>
+      <td>{{c.fare}}</td>
+      <td>{{c.distance}}</td>
+    </tr>
+  </tbody>
+</table>
+<div id="btn1">Every Passenger must provide a ticket upon boarding the JoyRide.</div>
+            <div id="btn2">
+              Happy Journey!!</div>
+</div>
+    </div>
+        </div>
+      </div>
+    </div>
+</pre>
+</div>

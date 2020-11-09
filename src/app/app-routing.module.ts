@@ -24,8 +24,10 @@ import { RegSuccessComponent } from './reg-success/reg-success.component';
 import { RegFailComponent } from './reg-fail/reg-fail.component';
 import { LoginSuccessComponent } from './login-success/login-success.component';
 import { LoginFailComponent } from './login-fail/login-fail.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 const routes: Routes = [
+  
   {path:'',component:SearchBusComponent},
   {path:'about',component: AboutUsComponent},
   {path:'terms',component:TermsOfUseComponent},
@@ -49,6 +51,7 @@ const routes: Routes = [
   {path:'seat',component:SeatgridComponent},
   {path:'feedback',component:FeedbackComponent},
   {path:'pay',component:PayComponent},
+  {path:'ticket-info', component:TicketComponent}
    
 ];
 

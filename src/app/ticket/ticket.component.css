@@ -1,0 +1,45 @@
+img{
+    height: 30px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.navbar{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+nav{
+    margin-top:0px;
+
+}
+.info{
+    text-align: center;
+}
+.head{
+    background-color: black;
+
+}
+#details{
+    color: antiquewhite;
+}
+.ticket{
+    
+    margin: 50px 100px 0px 100px;
+    background-color: #ffff99;
+
+}
+#btn1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: medium;
+    color: #000066;
+}
+#btn2{
+    color: #cc0000;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: large;
+}
